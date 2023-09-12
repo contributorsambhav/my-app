@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      Lovely
-      <div className="blank">secc</div>
-    </div>
+    <>
+    <Navbar title = "Title"></Navbar>
+    </>
+    
   );
 }
 
