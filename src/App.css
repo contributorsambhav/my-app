@@ -20,3 +20,9 @@ li{
   font-weight: 700;
   color:white;
 }
+
+.tackxt{
+ min-width:80vw;
+ margin-left: 4vw;
+ font-size: larger;
+}
