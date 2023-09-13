@@ -24,5 +24,10 @@ li{
 .tackxt{
  min-width:80vw;
  margin-left: 4vw;
- font-size: larger;
+ font-size:xx-large;
+ margin-top: 10px;
+ border-radius: 18px;
+ outline-color: blue;
+ border: 2px solid blueviolet;
+ padding: 8px;
 }
