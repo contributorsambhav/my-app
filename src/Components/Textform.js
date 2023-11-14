@@ -33,7 +33,7 @@ export default function Textform() {
 
         <div className="bg-green-500 ">
           <button
-            className="btn mx-3 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-6 mx-auto bg-blue-600"
+            className="btn  btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-6 mx-auto bg-blue-600"
             onClick={handleUpClick}
           >
             Convert To Uppercase
@@ -45,10 +45,10 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-3 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-3 mx-auto bg-blue-600"
+            className="btn  align-items-center  btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-3 mx-auto bg-blue-600"
             onClick={() => setText("new text")}
           >
-            Update
+            Update 
           </button>
         </div>
       </div>
