@@ -6,13 +6,14 @@ export default function Navbar(props) {
   return (
     
 <div className="App">
-      <div className="navbar">
+      <div className="navbar ">
         <nav>
           <ul>
             <li><a href="/">{props.title}</a></li>
             <li><a href="/">About</a></li>
             <li><a href="/">Contact</a></li>
           </ul>
+          <span className="dark justify-end">Dark</span>
         </nav>
 </div>
 </div>
