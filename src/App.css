@@ -1,23 +1,25 @@
 body{
   margin: 0;
   padding: 0;
+  
 }
 
 .navbar{
-  background: rgb(19, 160, 89);
+  background: rgb(96, 134, 154);
   list-style: none;
   color:white;
+  font-size: medium;
   list-style: square;
-  padding: 2vh;
+  padding: 1vh;
 }
 
 ul {list-style-type: none;}
 
 li{
   display: inline;
-  margin: 3vw;
+  margin: 2vw;
   font-size:x-large;
-  font-weight: 700;
+  font-weight: 500;
   color:white;
 }
 
@@ -25,12 +27,12 @@ li{
  min-width:80%;
  margin-left: 10%;
  margin-right: 10%;
- font-size:xx-large;
+ font-size:large;
  margin-top: 10px;
  border-radius: 18px;
  outline-color: rgb(112, 112, 177);
  border: 2px double rgb(167, 137, 196);
- padding: 8px;
+ padding: 20px;
  box-shadow: 5px;
 }
 
