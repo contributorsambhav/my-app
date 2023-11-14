@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
-let name = "sambhav";
+// let name = "sambhav";
 export default function Textform() {
   const [text, setText] = useState("oldtext");
-  let inpdiv = document.getElementById("inpdiv");
+  let newText = text.toUpperCase();
 
   function handleUpClick() {
     console.log("Convert to uppercase was clicked");
-    setText("UPPERCASE");
+    setText(newText);
   }
 
   function handleOnChange(event) {
     console.log("on change listened");
-    setText(event.target.value)
+    setText(event.target.value);
   }
 
   return (
@@ -30,25 +30,27 @@ export default function Textform() {
           value={text}
           onChange={handleOnChange}
         ></textarea>
-        <br></br>
-        <button
-          className="btn btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-6 mx-auto bg-blue-600"
-          onClick={handleUpClick}
-        >
-          Convert To Uppercase
-        </button>
-        <br></br>
-        hello {name}
-        <br></br>
-        {text}
-        <br></br>
-        <button
-          type="button"
-          className="btn btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-3 mx-auto bg-blue-600"
-          onClick={() => setText("new text")}
-        >
-          Update
-        </button>
+
+        <div className="bg-green-500 ">
+          <button
+            className="btn mx-3 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-6 mx-auto bg-blue-600"
+            onClick={handleUpClick}
+          >
+            Convert To Uppercase
+          </button>
+
+          {/* hello {name} */}
+
+          {text}
+
+          <button
+            type="button"
+            className="btn mx-3 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-3 mx-auto bg-blue-600"
+            onClick={() => setText("new text")}
+          >
+            Update
+          </button>
+        </div>
       </div>
     </div>
   );
