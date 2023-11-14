@@ -5,7 +5,8 @@ import Textform from "./Components/Textform";
 function App() {
   return (
     <>
-    <Navbar title = "Title"></Navbar>
+    {/* <Navbar title = "Title"></Navbar> */}
+    <Navbar />
     <Textform></Textform>
     </>
     

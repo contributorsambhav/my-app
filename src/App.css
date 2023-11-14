@@ -4,7 +4,7 @@ body{
 }
 
 .navbar{
-  background: rgb(121, 236, 178);
+  background: rgb(19, 160, 89);
   list-style: none;
   color:white;
   list-style: square;
@@ -22,12 +22,15 @@ li{
 }
 
 .tackxt{
- min-width:80vw;
- margin-left: 4vw;
+ min-width:80%;
+ margin-left: 10%;
+ margin-right: 10%;
  font-size:xx-large;
  margin-top: 10px;
  border-radius: 18px;
- outline-color: blue;
- border: 2px solid blueviolet;
+ outline-color: rgb(112, 112, 177);
+ border: 2px double rgb(167, 137, 196);
  padding: 8px;
+ box-shadow: 5px;
 }
+

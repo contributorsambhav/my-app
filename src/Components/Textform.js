@@ -1,15 +1,55 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 
+let name = "sambhav";
 export default function Textform() {
+  const [text, setText] = useState("oldtext");
+  let inpdiv = document.getElementById("inpdiv");
+
+  function handleUpClick() {
+    console.log("Convert to uppercase was clicked");
+    setText("UPPERCASE");
+  }
+
+  function handleOnChange(event) {
+    console.log("on change listened");
+    setText(event.target.value)
+  }
+
   return (
     <div>
-<div className="cont">
-  <label for="exampleFormControlTextarea1" class="form-label"></label>
-  <textarea className="form-control tackxt" placeholder='  Enter content here: ' id="exampleFormControlTextarea1" rows="5"></textarea><br></br>
-  <button className="btn btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 m-6 bg-blue-600">Convert To Uppercase</button>
-</div>
-
-
+      <div className="cont">
+        <label
+          htmlFor="exampleFormControlTextarea1"
+          className="form-label"
+        ></label>
+        <textarea
+          className="form-control tackxt"
+          placeholder="  Enter content here: "
+          id="exampleFormControlTextarea1"
+          rows="5"
+          value={text}
+          onChange={handleOnChange}
+        ></textarea>
+        <br></br>
+        <button
+          className="btn btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-6 mx-auto bg-blue-600"
+          onClick={handleUpClick}
+        >
+          Convert To Uppercase
+        </button>
+        <br></br>
+        hello {name}
+        <br></br>
+        {text}
+        <br></br>
+        <button
+          type="button"
+          className="btn btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-content p-4 my-3 mx-auto bg-blue-600"
+          onClick={() => setText("new text")}
+        >
+          Update
+        </button>
+      </div>
     </div>
-  )
+  );
 }
