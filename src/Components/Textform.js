@@ -130,7 +130,7 @@ export default function Textform() {
           </button>
         </div>
 
-        <div className="analysis mx-auto p-4 w-[60%] bg-green-200">
+        <div className="analysis mx-auto py-4 px-6 rounded-lg w-[80%] bg-green-200">
           <div className="textinfo justify-center my-3 items-center text-center">
             {text.trim().split(" ").length}words and {text.length} characters
             <br></br>
@@ -139,7 +139,7 @@ export default function Textform() {
             coz he is a slow reader.
           </div>
 
-          <div className="preview justify-center items-center text-center">
+          <div className="preview  justify-center items-center text-center">
             <div className="heading my-1 text-4xl">Preview</div>
             <div className="text-xl textpreview">{text}</div>
           </div>
