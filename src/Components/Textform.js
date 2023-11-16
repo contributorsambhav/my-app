@@ -5,17 +5,14 @@ export default function Textform() {
   const [text, setText] = useState("Sample text");
   let newText = text.toUpperCase();
   let tackxt = document.getElementById("exampleFormControlTextarea1");
-  let words = text.split(" ")
-  let initCap = ""
-  console.log(words)
-  words.forEach((word)=>{
-    word = word.charAt(0).toUpperCase()+word.slice(1).toLowerCase();
-    
-    initCap = initCap +word+" ";
-    
-})
-  console.log(words)
-  console.log(initCap)
+  let words = text.split(" ");
+  let initCap = "";
+
+  words.forEach((word) => {
+    word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+
+    initCap = initCap + word + " ";
+  });
 
   function handleUpClick() {
     console.log("Convert to uppercase was clicked");
@@ -79,7 +76,7 @@ export default function Textform() {
           <button
             type="button"
             className="btn mx-4 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-4 py-2  my-3 bg-blue-600"
-            onClick={() => { 
+            onClick={() => {
               try {
                 tackxt.style.fontWeight = 400;
                 tackxt.style.fontSize = "medium";
@@ -87,29 +84,32 @@ export default function Textform() {
                 console.log(err);
               }
             }}
-            >Lighter text</button>
+          >
+            Lighter text
+          </button>
 
-<button
+          <button
             type="button"
             className="btn mx-4 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-4 py-2  my-3 bg-blue-600"
             onClick={() => {
-              setText(initCap)
+              setText(initCap);
             }}
           >
-           Initcap
+            Initcap
           </button>
-
-
         </div>
+        <div className="analysis mx-auto p-4 w-[60%] bg-green-200">
+          <div className="textinfo justify-center my-3 items-center text-center">
+            {text.trim().split(" ").length}words and {text.length} characters
+            <br></br>
+            Will take the developer approximately{" "}
+            {Math.floor(text.trim().split(" ").length / 1.93)} seconds to read coz he is a slow reader.
+          </div>
 
-        <div className="textinfo justify-center my-3 items-center text-center">
-          {text.trim().split(" ").length}words and {text.length} characters<br></br>
-          Will take the developer approximately {Math.floor(text.trim().split(" ").length/1.93)} seconds to read.
-        </div>
-
-        <div className="preview justify-center items-center text-center">
-          <div className="heading my-1 text-4xl">Preview</div>
-          <div className="text-xl textpreview">{text}</div>
+          <div className="preview justify-center items-center text-center">
+            <div className="heading my-1 text-4xl">Preview</div>
+            <div className="text-xl textpreview">{text}</div>
+          </div>
         </div>
       </div>
     </div>

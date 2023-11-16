@@ -34,5 +34,6 @@ li{
  border: 2px double rgb(167, 137, 196);
  padding: 20px;
  box-shadow: 5px;
+ opacity: 0.8;
 }
 
