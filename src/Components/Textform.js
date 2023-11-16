@@ -24,6 +24,17 @@ export default function Textform() {
     setText(event.target.value);
   }
 
+  function removeExtraSpaces() {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  }
+
+  function copyToClp() {
+    var text = document.getElementById("exampleFormControlTextarea1");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  }
+
   return (
     <div>
       <div className="cont">
@@ -40,9 +51,9 @@ export default function Textform() {
           onChange={handleOnChange}
         ></textarea>
 
-        <div className=" mx-auto  w-fit  ">
+        <div className=" mx-auto buttons w-fit  ">
           <button
-            className="btn mx-4 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-center	 px-4 py-2  my-6  bg-blue-600"
+            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-center	 px-3 py-2  my-6  bg-blue-600"
             onClick={handleUpClick}
           >
             Convert To Uppercase
@@ -52,7 +63,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-4 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-4 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => setText(text.toLowerCase())}
           >
             Convert to Lowercase
@@ -60,7 +71,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-4 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-4 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               try {
                 tackxt.style.fontWeight = 700;
@@ -75,7 +86,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-4 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-4 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               try {
                 tackxt.style.fontWeight = 400;
@@ -90,20 +101,42 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-4 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-4 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               setText(initCap);
             }}
           >
             Initcap
           </button>
+
+          <button
+            type="button"
+            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            onClick={() => {
+              removeExtraSpaces();
+            }}
+          >
+            RemoveExtraSpaces
+          </button>
+
+          <button
+            type="button"
+            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            onClick={() => {
+              copyToClp();
+            }}
+          >
+            Copy to Clipboard
+          </button>
         </div>
+
         <div className="analysis mx-auto p-4 w-[60%] bg-green-200">
           <div className="textinfo justify-center my-3 items-center text-center">
             {text.trim().split(" ").length}words and {text.length} characters
             <br></br>
             Will take the developer approximately{" "}
-            {Math.floor(text.trim().split(" ").length / 1.93)} seconds to read coz he is a slow reader.
+            {Math.floor(text.trim().split(" ").length / 1.93)} seconds to read
+            coz he is a slow reader.
           </div>
 
           <div className="preview justify-center items-center text-center">
