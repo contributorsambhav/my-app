@@ -14,9 +14,23 @@ function App() {
   return (
     <>
     {/* <Navbar title = "Title"></Navbar> */}
-    <Navbar />
-    <Textform></Textform>
-    <AboutUs />
+<Router>
+    <Navbar title = "TextUtils" />
+
+    <Switch>
+          <Route exact path="/about">
+            <AboutUs />
+          </Route>
+          
+          <Route exact path="/">
+            <Textform />
+          </Route>
+
+        </Switch>
+
+</Router>
+  
+    
     </>
     
   );
