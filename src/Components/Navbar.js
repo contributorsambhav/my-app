@@ -25,7 +25,7 @@ if (count%2==0){
             <li><a href="/">{props.title}</a></li>
             <li><a href="/">About</a></li>
             <li><a href="/">Contact</a></li>
-            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-2 ml-[44vw]" onClick={toggleDark}>{tgl}</button></li>
+            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-2 ml-[40vw]" onClick={toggleDark}>{tgl}</button></li>
           </ul>
         </nav>
       </div>
