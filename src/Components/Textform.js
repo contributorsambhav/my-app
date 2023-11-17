@@ -7,6 +7,12 @@ export default function Textform() {
   let tackxt = document.getElementById("exampleFormControlTextarea1");
   let words = text.split(" ");
   let initCap = "";
+  let wordCount;
+  if(text=== ""){
+    wordCount=0;
+  }else{
+    wordCount = text.trim().split(" ").length
+  }
 
   words.forEach((word) => {
     word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
@@ -51,9 +57,9 @@ export default function Textform() {
           onChange={handleOnChange}
         ></textarea>
 
-        <div className=" mx-auto buttons w-fit  ">
+        <div className=" mx-auto buttons  text-center  w-[80%]  ">
           <button
-            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-center	 px-3 py-2  my-6  bg-blue-600"
+            className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center justify-center	 px-3 py-2  my-6  bg-blue-600"
             onClick={handleUpClick}
           >
             Convert To Uppercase
@@ -63,7 +69,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => setText(text.toLowerCase())}
           >
             Convert to Lowercase
@@ -71,7 +77,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               try {
                 tackxt.style.fontWeight = 700;
@@ -86,7 +92,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               try {
                 tackxt.style.fontWeight = 400;
@@ -101,7 +107,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               setText(initCap);
             }}
@@ -111,7 +117,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               removeExtraSpaces();
             }}
@@ -121,7 +127,7 @@ export default function Textform() {
 
           <button
             type="button"
-            className="btn mx-2 btn-primary h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
+            className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
               copyToClp();
             }}
@@ -132,7 +138,7 @@ export default function Textform() {
 
         <div className="analysis mx-auto py-4 px-6 rounded-lg w-[80%] bg-green-200">
           <div className="textinfo justify-center my-3 items-center text-center">
-            {text.trim().split(" ").length}words and {text.length} characters
+            {wordCount}words and {text.length} characters
             <br></br>
             Will take the developer approximately{" "}
             {Math.floor(text.trim().split(" ").length / 1.93)} seconds to read
