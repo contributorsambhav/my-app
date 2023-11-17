@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // let name = "sambhav";
 export default function Textform() {
-  const [text, setText] = useState("Sample text");
+  const [text, setText] = useState("");
   let newText = text.toUpperCase();
   let tackxt = document.getElementById("exampleFormControlTextarea1");
   let words = text.split(" ");

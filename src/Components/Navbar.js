@@ -9,7 +9,7 @@ export default function Navbar(props) {
     let root = document.getElementById("root");
     console.log(root);
     count += 1 
-if (count%2==0){
+if (count%2===0){
   root.style.filter = "invert(90%)"
   setTgl("Enable Light mode")
 }else{
@@ -22,14 +22,16 @@ if (count%2==0){
     <div className="App">
       <div className="navbar ">
         <nav>
-          <ul className='justify-center items-center'>
+          <ul className='justify-center items-baseline'>
 
             <span className='mx-2 text-3xl '>{props.title}</span>
           
-            <li><Link to="/"></Link>Home</li>
+
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/">Contact</Link></li>
-            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-4 py-2 ml-[32vw]" onClick={toggleDark}>{tgl}</button></li>
+            <li><Link to="/contact">Contact</Link></li>
+            
+            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-3 py-1 ml-[30vw]" onClick={toggleDark}>{tgl}</button></li>
           </ul>
         </nav>
       </div>
