@@ -43,7 +43,7 @@ export default function Textform() {
 
   return (
     <div>
-      <div className="cont">
+      <div className="cont bg-gray-50">
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
