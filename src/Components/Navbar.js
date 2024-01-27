@@ -31,7 +31,7 @@ if (count%2===0){
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             
-            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-3 py-1 ml-[30vw]" onClick={toggleDark}>{tgl}</button></li>
+            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-3 py-1 " onClick={toggleDark}>{tgl}</button></li>
           </ul>
         </nav>
       </div>
