@@ -4,7 +4,7 @@ import React, { useState } from "react";
 export default function Textform() {
   const [text, setText] = useState("");
   let newText = text.toUpperCase();
-  let tackxt = document.getElementById("exampleFormControlTextarea1");
+  // let tackxt = document.getElementById("exampleFormControlTextarea1");
   let words = text.split(" ");
   let initCap = "";
   let wordCount;
@@ -75,7 +75,7 @@ export default function Textform() {
             Convert to Lowercase
           </button>
 
-          <button
+          {/* <button
             type="button"
             className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
@@ -88,9 +88,9 @@ export default function Textform() {
             }}
           >
             Bold Text
-          </button>
+          </button> */}
 
-          <button
+          {/* <button
             type="button"
             className="btn mx-2 btn-primary w-[200px] h-14 text-white font-semibold rounded-lg border-white border-double border-4 text-center  px-3 py-2  my-3 bg-blue-600"
             onClick={() => {
@@ -103,7 +103,7 @@ export default function Textform() {
             }}
           >
             Lighter text
-          </button>
+          </button> */}
 
           <button
             type="button"
@@ -136,7 +136,7 @@ export default function Textform() {
           </button>
         </div>
 
-        <div className="analysis mx-auto py-4 px-6 rounded-lg w-[80%] bg-green-200">
+        <div className=" mb-40 analysis mx-auto py-4 px-6 rounded-lg w-[80%] bg-green-200">
           <div className="textinfo justify-center my-3 items-center text-center">
             {wordCount}words and {text.length} characters
             <br></br>

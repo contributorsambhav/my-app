@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   const [tgl, setTgl] = useState("Enable Dark mode");
@@ -21,17 +21,17 @@ if (count%2===0){
   return (
     <div className="App">
       <div className="navbar ">
-        <nav>
-          <ul className='justify-center items-baseline'>
+        <nav class = "h-fit">
+          <ul className='flex justify-between '>
 
-            <span className='mx-2 text-3xl '>{props.title}</span>
+            <li className='mx-2 text-2xl '>{props.title}</li>
           
 
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            {/* <li><Link to="/">Home</Link></li> */}
+            {/* <li><Link to="/about">About</Link></li> */}
+            {/* <li><Link to="/contact">Contact</Link></li> */}
             
-            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-3 py-1 " onClick={toggleDark}>{tgl}</button></li>
+            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-3 " onClick={toggleDark}>{tgl}</button></li>
           </ul>
         </nav>
       </div>

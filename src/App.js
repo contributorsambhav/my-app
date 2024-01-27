@@ -1,16 +1,16 @@
-import AboutUs from "./Components/AboutUs";
+// import AboutUs from "./Components/AboutUs";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Textform from "./Components/Textform";
 
 
-import { BrowserRouter as Router, Switch, Route  } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route  } from "react-router-dom";
 
 function App() {
   return (
     <>
       {/* <Navbar title = "Title"></Navbar> */}
-      <Router>
+      {/* <Router>
         <Navbar title="TextUtils" />
 
         <Switch>
@@ -23,7 +23,10 @@ function App() {
             
 
         </Switch>
-      </Router>
+      </Router> */}
+      <Navbar title = "TextUtils"></Navbar>
+      <Textform></Textform>
+
     </>
   );
 }
