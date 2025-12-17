@@ -43,7 +43,7 @@ export default function Textform() {
 
   return (
     <div>
-      <div className="cont bg-gray-50">
+      <div className="cont h-full bg-gray-50">
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
@@ -136,7 +136,7 @@ export default function Textform() {
           </button>
         </div>
 
-        <div className=" mb-40 analysis mx-auto py-4 px-6 rounded-lg w-[80%] bg-green-200">
+        <div className=" analysis mx-auto py-4 px-6 rounded-lg w-[80%] bg-green-200">
           <div className="textinfo justify-center my-3 items-center text-center">
             {wordCount}words and {text.length} characters
             <br></br>

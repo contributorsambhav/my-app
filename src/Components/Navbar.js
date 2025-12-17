@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+
 import PropTypes from 'prop-types';
+
 // import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
@@ -10,7 +12,7 @@ export default function Navbar(props) {
     console.log(root);
     count += 1 
 if (count%2===0){
-  root.style.filter = "invert(90%)"
+  root.style.filter = "invert(80%)"
   setTgl("Enable Light mode")
 }else{
   root.style.filter = "invert(0%)"
@@ -24,14 +26,14 @@ if (count%2===0){
         <nav class = "h-fit">
           <ul className='flex justify-between '>
 
-            <li className='mx-2 text-2xl '>{props.title}</li>
+            <li className='mx-2 text-xl '>{props.title}</li>
           
 
             {/* <li><Link to="/">Home</Link></li> */}
             {/* <li><Link to="/about">About</Link></li> */}
             {/* <li><Link to="/contact">Contact</Link></li> */}
             
-            <li><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-3 " onClick={toggleDark}>{tgl}</button></li>
+            <li className ="text-xl"><button className="text-gray-200 rounded-lg bg-gradient-to-r from-slate-900 to-slate-700 px-3 " onClick={toggleDark}>{tgl}</button></li>
           </ul>
         </nav>
       </div>
